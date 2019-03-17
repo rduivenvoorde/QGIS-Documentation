@@ -44,7 +44,7 @@ help:
 	@echo "  "
 
 clean:
-	rm -rf $(SOURCEDIR)/static
+#	rm -rf $(SOURCEDIR)/static
 	rm -rf $(BUILDDIR)/*
 
 springclean: clean
@@ -59,7 +59,7 @@ springclean: clean
 updatestatic:
 	@echo
 	@echo "Updating static content into $(SOURCEDIR)/static."
-	rsync -uthvr --delete $(RESOURCEDIR)/ $(SOURCEDIR)/static
+#	rsync -uthvr --delete $(RESOURCEDIR)/ $(SOURCEDIR)/static
 
 html: updatestatic
 	$(SPHINXINTL) --config $(SOURCEDIR)/conf.py build --language=$(LANG)
